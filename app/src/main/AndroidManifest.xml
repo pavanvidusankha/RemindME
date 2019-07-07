@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pavan.re_mindme">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_remindme_blue"
+        android:label="Re-Mind Me"
+        android:roundIcon="@mipmap/ic_remindme_blue_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity" android:label="Re-Mind ME "/>
+        <activity android:name=".Reminder.AlarmActivity" android:label="Reminder"/>
+
+        <receiver android:name=".Reminder.AlarmReciever" />
+
+        <activity android:name=".rest.ToDoList.TodoMainActivity" />
+        <activity android:name=".rest.ToDoList.AddTaskActivity" />
+
+        <provider
+            android:name=".rest.ToDoList.data.TaskContentProvider"
+            android:authorities="com.example.pavan.re_mindme.rest.ToDoList"
+            android:exported="false" />
+
+        <activity android:name=".ToDoList.TodoListMainActivity"  android:label="To Do List"/>
+        <activity android:name=".Notes.NotesMainActivity"  android:label="Notes"/>
+        <activity android:name=".Notes.NoteActivity" android:label="Add Note"/>
+        <activity android:name=".Countdown.CountDTMainActivity" android:label="Countdown"/>
+        <activity android:name=".PasswordManager.RecordsMainActivity" android:label="Password Manager" />
+        <activity android:name=".PasswordManager.RecordActivity" android:label="Add Record"/>
+        <activity android:name=".AboutActivity" android:label="About"></activity>
+    </application>
+
+</manifest>
